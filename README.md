@@ -2,7 +2,7 @@
 Crowdfunding_ETL Group Project
 
 Group Members:
-Richard Malolepszy, Fahmida Billa, Lailah Libay, Zahra
+Richard Malolepszy, Fahmida Billa, Lailah Libay, Zahra Tabrizi
 
 Files included in Group Project:
 Resources Folder: campaign.csv, category.csv, contacts.csv, contacts.xlsx, crowdfunding.xlsx, subcategory.csv
