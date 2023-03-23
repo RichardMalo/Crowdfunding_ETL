@@ -1,5 +1,5 @@
 # Crowdfunding_ETL
-Crowdfunding_ETL Group Project
+Crowdfunding_ETL Group Project:
 
 Group Members:
 Richard Malolepszy, Fahmida Billa, Lailah Libay, Zahra Tabrizi
