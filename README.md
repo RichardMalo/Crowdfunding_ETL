@@ -58,4 +58,6 @@ The database has the appropriate primary and foreign keys and relationships (5 p
 Each CSV file is imported into the appropriate table without errors (5 points)
 The data from each table is displayed using a SELECT * statement (5 points)
 
+Notes: We had a GitHub error after uploads so a new Git was recreated as the simplest solution forward.
+
 
