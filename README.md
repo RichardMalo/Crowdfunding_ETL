@@ -8,9 +8,19 @@ Files included in Group Project:
 Resources Folder: campaign.csv, category.csv, contacts.csv, contacts.xlsx, crowdfunding.xlsx, subcategory.csv
 ETL_Mini_Project_Finished.ipynb
 Crowdfunding_ERD_Schema.sql
+Selects.sql
 Schema_Diagram.png
 README.md
 .gitignore
+
+Loading into Database notes:
+-- Order of loading the files to tables was as follows:
+-- 1) Import category.csv into category table
+-- 2) Import subcategory.csv into subcategory table
+-- 3) Import contacts.csv into contacts table
+-- 4) Import campaign.csv into campaign table
+-- After the tables are created correctly and files are loaded properly into the tables following the Crowdfunding_ERD_Schema.sql
+-- using PostgreSQL(pgAdmin app) you can run the following commands to see that they are properly loaded in.
 
 Project Overview:
 Requirements:

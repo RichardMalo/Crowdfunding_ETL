@@ -1,60 +1,62 @@
--- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
--- Link to schema: https://app.quickdatabasediagrams.com/#/d/Dvuune
--- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
+-- Order of loading the files is as follows:
+-- 1) Import category.csv into category table
+-- 2) Import subcategory.csv into subcategory table
+-- 3) Import contacts.csv into contacts table
+-- 4) Import campaign.csv into campaign table
 
 
-CREATE TABLE "Category" (
+CREATE TABLE "category" (
     "category_id" VARCHAR(10)   NOT NULL,
     "category" VARCHAR(25)   NOT NULL,
-    CONSTRAINT "pk_Category" PRIMARY KEY (
+    CONSTRAINT "pk_category" PRIMARY KEY (
         "category_id"
      )
 );
 
-CREATE TABLE "Subcategory" (
+CREATE TABLE "subcategory" (
     "subcategory_id" VARCHAR(20)   NOT NULL,
     "sub-category" VARCHAR(50)   NOT NULL,
-    CONSTRAINT "pk_Subcategory" PRIMARY KEY (
+    CONSTRAINT "pk_subcategory" PRIMARY KEY (
         "subcategory_id"
      )
 );
 
-CREATE TABLE "Contacts" (
-    "contact_id" INTEGER(20)   NOT NULL,
+CREATE TABLE "contacts" (
+    "contact_id" INTEGER   NOT NULL,
     "first_name" VARCHAR(30)   NOT NULL,
     "last_name" VARCHAR(30)   NOT NULL,
     "email" VARCHAR(100)   NOT NULL,
-    CONSTRAINT "pk_Contacts" PRIMARY KEY (
+    CONSTRAINT "pk_contacts" PRIMARY KEY (
         "contact_id"
      )
 );
 
-CREATE TABLE "Campaign" (
-    "cf_id" INTEGER(20)   NOT NULL,
-    "contact_id" INTEGER(20)   NOT NULL,
+CREATE TABLE "campaign" (
+    "cf_id" INTEGER   NOT NULL,
+    "contact_id" INTEGER   NOT NULL,
     "company_name" VARCHAR(100)   NOT NULL,
     "description" VARCHAR(200)   NOT NULL,
-    "goal" INTEGER(50)   NOT NULL,
-    "pledged" INTEGER(50)   NOT NULL,
+    "goal" NUMERIC   NOT NULL,
+    "pledged" NUMERIC   NOT NULL,
     "outcome" VARCHAR(20)   NOT NULL,
-    "backers_count" INTEGER(30)   NOT NULL,
+    "backers_count" INTEGER   NOT NULL,
     "country" VARCHAR(10)   NOT NULL,
     "currency" VARCHAR(10)   NOT NULL,
-    "launched_date" DATETIME(30)   NOT NULL,
-    "end_date" DATETIME(30)   NOT NULL,
+    "launched_date" DATE   NOT NULL,
+    "end_date" DATE   NOT NULL,
     "category_id" VARCHAR(20)   NOT NULL,
     "subcategory_id" VARCHAR(20)   NOT NULL,
-    CONSTRAINT "pk_Campaign" PRIMARY KEY (
+    CONSTRAINT "pk_campaign" PRIMARY KEY (
         "cf_id"
      )
 );
 
-ALTER TABLE "Campaign" ADD CONSTRAINT "fk_Campaign_contact_id" FOREIGN KEY("contact_id")
-REFERENCES "Contacts" ("contact_id");
+ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_contact_id" FOREIGN KEY("contact_id")
+REFERENCES "contacts" ("contact_id");
 
-ALTER TABLE "Campaign" ADD CONSTRAINT "fk_Campaign_category_id" FOREIGN KEY("category_id")
-REFERENCES "Category" ("category_id");
+ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_category_id" FOREIGN KEY("category_id")
+REFERENCES "category" ("category_id");
 
-ALTER TABLE "Campaign" ADD CONSTRAINT "fk_Campaign_subcategory_id" FOREIGN KEY("subcategory_id")
-REFERENCES "Subcategory" ("subcategory_id");
+ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_subcategory_id" FOREIGN KEY("subcategory_id")
+REFERENCES "subcategory" ("subcategory_id");
 
