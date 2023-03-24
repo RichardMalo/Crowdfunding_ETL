@@ -1,19 +1,27 @@
 # Crowdfunding_ETL
+
 Crowdfunding_ETL Group Project:
 
-Group Members:
+## Group Members
+
 Richard Malolepszy, Fahmida Billa, Lailah Libay, Zahra Tabrizi
 
-Files included in Group Project:
+## Files included in Group Project
+
+Diagram Folder: Schema_Diagram.png, campaign.png, category.png, contacts.png, subcategory.png
 Resources Folder: campaign.csv, category.csv, contacts.csv, contacts.xlsx, crowdfunding.xlsx, subcategory.csv
 ETL_Mini_Project_Finished.ipynb
+ETL_Mini_Project_Fahmida_Billa.ipynb
+ETL_Mini_Project_Finished_LailahLibay.ipynb
+ETL_Mini_Project_Finished_Zahra.ipynb
+ETL_Mini_Project_RichardMalolepszy.ipynb
 Crowdfunding_ERD_Schema.sql
 Selects.sql
-Schema_Diagram.png
 README.md
 .gitignore
 
-Loading into Database notes:
+## Loading into Database notes
+
 -- Order of loading the files to tables was as follows:
 -- 1) Import category.csv into category table
 -- 2) Import subcategory.csv into subcategory table
@@ -22,7 +30,8 @@ Loading into Database notes:
 -- After the tables are created correctly and files are loaded properly into the tables following the Crowdfunding_ERD_Schema.sql
 -- using PostgreSQL(pgAdmin app) you can run the following commands to see that they are properly loaded in.
 
-Project Overview:
+## Project Overview
+
 Requirements:
 
 A Category DataFrame is Created (15 points):
@@ -67,7 +76,5 @@ A crowdfunding_db is created using the crowdfunding_db_schema.sql file (5 points
 The database has the appropriate primary and foreign keys and relationships (5 points)
 Each CSV file is imported into the appropriate table without errors (5 points)
 The data from each table is displayed using a SELECT * statement (5 points)
-
-Notes: We had a GitHub error after uploads so a new Git was recreated as the simplest solution forward.
 
 
